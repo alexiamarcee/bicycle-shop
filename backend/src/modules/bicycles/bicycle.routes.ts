@@ -5,7 +5,7 @@ const router = Router();
 
 router.get("/", BicycleController.getAll);
 
-router.get("/eager/:id", BicycleController.getEagerById);
+router.get("/eagerly/:id", BicycleController.getEagerlyById);
 
 router.get("/:id", BicycleController.getById);
 

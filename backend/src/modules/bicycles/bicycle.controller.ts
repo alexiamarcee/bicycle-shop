@@ -1,6 +1,5 @@
 import { Request, Response, NextFunction } from "express";
 import { BicycleService } from "./bicycle.service";
-import { Brand } from "../brands/brand.model";
 
 export class BicycleController {
     
@@ -29,16 +28,10 @@ export class BicycleController {
         }
     }
 
-    static async getEagerById(req: Request, res: Response, next: NextFunction) {
+    static async getEagerlyById(req: Request, res: Response, next: NextFunction) {
         try {
             const id = Number(req.params.id);
-            const bicycles = await BicycleService.findById(id, {
-                include: {
-                    model: Brand,
-                    as: "brand",
-                    required: true,
-                },
-            });
+            const bicycles = await BicycleService.findEagerlyById(id);
             if (!bicycles) {
                 res.status(404).json({
                     message: "Bicicleta no encontrada",

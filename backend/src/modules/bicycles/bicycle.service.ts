@@ -1,4 +1,5 @@
 import { Bicycle } from "./bicycle.model";
+import { Brand } from "../brands/brand.model"
 import { FindOptions } from "sequelize";
 
 export class BicycleService {
@@ -8,6 +9,17 @@ export class BicycleService {
         });
     }
     
+    static async findEagerlyById(id: number) {
+        return Bicycle.findByPk(id, {
+            include: [
+                {
+                    model: Brand,
+                    as: 'brand'
+                }
+            ]
+        });
+    }
+
     static async findById(id: number, options?: FindOptions) {
         return Bicycle.findByPk(id, options);
     }
