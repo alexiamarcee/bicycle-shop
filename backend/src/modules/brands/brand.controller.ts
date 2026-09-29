@@ -18,7 +18,7 @@ export class BrandController {
             const brands = await BrandService.findById(id);
             if (!brands) {
                 res.status(404).json({
-                    message: "Marca no encontrada",
+                    message: "Brand not found",
                 });
                 return;
             }
@@ -33,7 +33,7 @@ export class BrandController {
             const { name } = req.body;
             if (!name) {
                 res.status(400).json({
-                    message: "El nombre es obligatorio",
+                    message: "Name is required",
                 });
                 return;
             }
@@ -52,7 +52,7 @@ export class BrandController {
             const brands = await BrandService.findById(id);
             if (!brands) {
                 res.status(404).json({
-                    message: "Marca no encontrada",
+                    message: "Brand not found",
                 });
                 return;
             }
@@ -72,7 +72,7 @@ export class BrandController {
             const brands = await BrandService.findById(id);
             if (!brands) {
                 res.status(404).json({
-                    message: "Marca no encontrada",
+                    message: "Brand not found",
                 });
                 return;
             }

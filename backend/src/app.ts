@@ -10,7 +10,7 @@ app.use("/api", apiRouter);
 
 app.get("/", (req, res) => {
     res.json({
-        message : "API funcionando",
+        message : "API running",
     });
 });
 

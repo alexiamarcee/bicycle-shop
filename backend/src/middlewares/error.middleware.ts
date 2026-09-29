@@ -13,6 +13,6 @@ export function errorMiddleware(
     console.error(error);
     
     res.status(500).json({
-        message: "Error interno del servidor",
+        message: "Internal server error",
     });
 }

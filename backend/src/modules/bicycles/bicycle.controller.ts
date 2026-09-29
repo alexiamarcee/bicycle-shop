@@ -18,10 +18,21 @@ export class BicycleController {
             const bicycles = await BicycleService.findById(id);
             if (!bicycles) {
                 res.status(404).json({
-                    message: "Bicicleta no encontrada",
+                    message: "Bicycle not found",
                 });
                 return;
             }
+            res.json(bicycles);
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    static async getAllEagerlyByFrameMaterial(req: Request, res: Response, next: NextFunction) {
+        try {
+            const frameMaterial = String(req.params.frameMaterial);
+            const bicycles = await BicycleService.findAllEagerlyByFrameMaterial(frameMaterial);
+
             res.json(bicycles);
         } catch (error) {
             next(error);
@@ -34,7 +45,7 @@ export class BicycleController {
             const bicycles = await BicycleService.findEagerlyById(id);
             if (!bicycles) {
                 res.status(404).json({
-                    message: "Bicicleta no encontrada",
+                    message: "Bicycle not found",
                 });
                 return;
             }
@@ -49,7 +60,7 @@ export class BicycleController {
             const { brandId, model, description, price, stock } = req.body;
             if (!brandId || !model || price === undefined) {
                 res.status(400).json({
-                    message: "La marca, el modelo y el precio son obligatorios",
+                    message: "Brand, model and price are required",
                 });
                 return;
             }
@@ -72,7 +83,7 @@ export class BicycleController {
             const bicycles = await BicycleService.findById(id);
             if (!bicycles) {
                 res.status(404).json({
-                    message: "Bicicleta no encontrada",
+                    message: "Bicycle not found",
                 });
                 return;
             }
@@ -92,7 +103,7 @@ export class BicycleController {
             const bicycles = await BicycleService.findById(id);
             if (!bicycles) {
                 res.status(404).json({
-                    message: "Bicicleta no encontrada",
+                    message: "Bicycle not found",
                 });
                 return;
             }

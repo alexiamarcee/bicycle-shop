@@ -1,5 +1,6 @@
 import { Bicycle } from "./bicycle.model";
 import { Brand } from "../brands/brand.model"
+import { BicycleDetail } from "../bicycle-details/bicycle-details.model";
 import { FindOptions } from "sequelize";
 
 export class BicycleService {
@@ -17,6 +18,21 @@ export class BicycleService {
                     as: 'brand'
                 }
             ]
+        });
+    }
+
+    static async findAllEagerlyByFrameMaterial(frameMaterial: string) {
+        return Bicycle.findAll({
+            include: [
+                {
+                    model: BicycleDetail,
+                    as: 'detail',
+                    where: {
+                        frameMaterial
+                    }
+                }
+            ],
+            order: [["id", "ASC"]]
         });
     }
 
