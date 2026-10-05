@@ -1,5 +1,5 @@
 import { Order } from "./order.model";
-import { Customer } from "../customers/customer.model"
+import { Customer } from "../customers/customer.model";
 
 export class OrderService {
     static async findAll() {

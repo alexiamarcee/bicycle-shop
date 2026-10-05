@@ -1,13 +1,14 @@
 import { app } from "./app";
 import { sequelize } from "./config/database";
 import { env } from "./config/env";
-import { defineAssociations, defineDetails, defineCustomer } from "./models/associations";
+import { defineAssociations, defineDetails, defineCustomer, defineOrder } from "./models/associations";
 
 import "./modules/bicycles/bicycle.model";
 import "./modules/brands/brand.model";
 import "./modules/bicycle-details/bicycle-details.model";
 import "./modules/customers/customer.model";
 import "./modules/orders/order.model";
+import "./modules/order-items/order-item.model";
 
 async function startServer() {
     try {
@@ -15,6 +16,7 @@ async function startServer() {
         defineAssociations();
         defineDetails();
         defineCustomer();
+        defineOrder();
 
         await sequelize.authenticate();
         console.log("MySQL connection established.");

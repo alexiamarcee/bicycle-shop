@@ -1,4 +1,5 @@
 import { Brand } from "./brand.model";
+
 export class BrandService {
     static async findAll() {
         return Brand.findAll({

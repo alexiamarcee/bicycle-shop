@@ -1,0 +1,2079 @@
+{
+  "info": {
+    "_postman_id": "1b56c337-d299-414d-a58e-4f35fc16f5ea",
+    "name": "bicycle-shop-in-the-classroom",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58320268",
+    "_collection_link": "https://go.postman.co/collection/58320268-1b56c337-d299-414d-a58e-4f35fc16f5ea?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Bicycles",
+      "item": [
+        {
+          "name": "http://localhost:3000/api/bicycles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/bicycles",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "bicycles"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/bicycles",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/bicycles",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "bicycles"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "188"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"bc-g6igqL8xmN/GNeWDgS46wsXOFSw\""
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 28 Sep 2026 19:09:18 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 1,\n    \"brandId\": 1,\n    \"model\": \"Skylander\",\n    \"description\": \"Great for any occassion\",\n    \"price\": \"200.00\",\n    \"stock\": 10,\n    \"createdAt\": \"2026-09-28T19:08:46.000Z\",\n    \"updatedAt\": \"2026-09-28T19:09:06.000Z\"\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/bicycles",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"brandId\": \"1\",\r\n  \"model\": \"Sky\",\r\n  \"description\": \"Great for any occassion\",\r\n  \"price\": 200.00,\r\n  \"stock\": 10\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/bicycles",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "bicycles"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/bicycles",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"brandId\": \"1\",\r\n  \"model\": \"Sky\",\r\n  \"description\": \"Great for any occassion\",\r\n  \"price\": 200.00,\r\n  \"stock\": 10\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/bicycles",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "bicycles"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "177"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"b1-I55OBQDuqYRTueJQ+BWlLs+Po2k\""
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 28 Sep 2026 19:08:46 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 1,\n  \"brandId\": \"1\",\n  \"model\": \"Sky\",\n  \"description\": \"Great for any occassion\",\n  \"price\": 200,\n  \"stock\": 10,\n  \"updatedAt\": \"2026-09-28T19:08:46.605Z\",\n  \"createdAt\": \"2026-09-28T19:08:46.605Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/bicycles/1",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"brandId\": \"1\",\r\n  \"model\": \"Skylander\",\r\n  \"description\": \"Great for any occassion\",\r\n  \"price\": 200,\r\n  \"stock\": 10\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/bicycles/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "bicycles",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/bicycles/1",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"brandId\": \"1\",\r\n  \"model\": \"Skylander\",\r\n  \"description\": \"Great for any occassion\",\r\n  \"price\": 200,\r\n  \"stock\": 10\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/bicycles/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "bicycles",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "183"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"b7-Cjro4hoR1D6Bch4/8vzJrKeUVrU\""
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 28 Sep 2026 19:09:06 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 1,\n  \"brandId\": \"1\",\n  \"model\": \"Skylander\",\n  \"description\": \"Great for any occassion\",\n  \"price\": 200,\n  \"stock\": 10,\n  \"createdAt\": \"2026-09-28T19:08:46.000Z\",\n  \"updatedAt\": \"2026-09-28T19:09:06.600Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/bicycles/1",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/bicycles/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "bicycles",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/bicycles/1",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/bicycles/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "bicycles",
+                    "1"
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 28 Sep 2026 19:10:16 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Brands",
+      "item": [
+        {
+          "name": "http://localhost:3000/api/brands",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/brands",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "brands"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/brands",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/brands",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "brands"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "101"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"65-rYGC6YHiecHJOz95Ce27BtEsawc\""
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 28 Sep 2026 19:08:28 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Raw\",\n    \"createdAt\": \"2026-09-28T19:08:19.000Z\",\n    \"updatedAt\": \"2026-09-28T19:08:19.000Z\"\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/brands",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Raw\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/brands",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "brands"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/brands",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Raw\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/brands",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "brands"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "99"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"63-Zenc37RPvw+6lo8d9Yb1CtV2pis\""
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 28 Sep 2026 19:08:19 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 1,\n  \"name\": \"Raw\",\n  \"updatedAt\": \"2026-09-28T19:08:19.617Z\",\n  \"createdAt\": \"2026-09-28T19:08:19.617Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/brands/1",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"orbeaNEW\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/brands/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "brands",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/brands/1",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"orbeaNEW\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/brands/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "brands",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "104"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"68-R4vY0sr3VWjK9EYSbqVQ5HzLzyQ\""
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 28 Sep 2026 19:08:38 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 1,\n  \"name\": \"orbeaNEW\",\n  \"createdAt\": \"2026-09-28T19:08:19.000Z\",\n  \"updatedAt\": \"2026-09-28T19:08:38.242Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/brands/1",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/brands/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "brands",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/brands/1",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/brands/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "brands",
+                    "1"
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 28 Sep 2026 19:10:25 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Eagerly",
+      "item": [
+        {
+          "name": "http://localhost:3000/api/bicycles/eagerly/1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/bicycles/eagerly/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "bicycles",
+                "eagerly",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/bicycles/eagerly/1",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/bicycles/eagerly/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "bicycles",
+                    "eagerly",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "299"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"12b-5VavDoH945X7PuhjMQPA1v21Le8\""
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 28 Sep 2026 19:09:36 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 1,\n  \"brandId\": 1,\n  \"model\": \"Skylander\",\n  \"description\": \"Great for any occassion\",\n  \"price\": \"200.00\",\n  \"stock\": 10,\n  \"createdAt\": \"2026-09-28T19:08:46.000Z\",\n  \"updatedAt\": \"2026-09-28T19:09:06.000Z\",\n  \"brand\": {\n    \"id\": 1,\n    \"name\": \"orbeaNEW\",\n    \"createdAt\": \"2026-09-28T19:08:19.000Z\",\n    \"updatedAt\": \"2026-09-28T19:08:38.000Z\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/bicycles/eagerly/frame-material/carbon",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/bicycles/eagerly/frame-material/carbon",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "bicycles",
+                "eagerly",
+                "frame-material",
+                "carbon"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/bicycles/eagerly/frame-material/carbon",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/bicycles/eagerly/frame-material/carbon",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "bicycles",
+                    "eagerly",
+                    "frame-material",
+                    "carbon"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "369"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"171-+y7xEkFTqL65zXw5aTk38TXUVIY\""
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 29 Sep 2026 17:56:42 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 1,\n    \"brandId\": 1,\n    \"model\": \"Sky\",\n    \"description\": \"Great for any occassion\",\n    \"price\": \"200.00\",\n    \"stock\": 10,\n    \"createdAt\": \"2026-09-29T17:51:15.000Z\",\n    \"updatedAt\": \"2026-09-29T17:51:15.000Z\",\n    \"detail\": {\n      \"id\": 2,\n      \"bicycleId\": 1,\n      \"frameMaterial\": \"Carbon\",\n      \"wheelSize\": \"10.0\",\n      \"weight\": \"50.00\",\n      \"suspension\": \"\",\n      \"createdAt\": \"2026-09-29T17:51:48.000Z\",\n      \"updatedAt\": \"2026-09-29T17:54:10.000Z\"\n    }\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/orders/customers/1",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/orders/customers/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "orders",
+                "customers",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/orders/customers/1",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/orders/customers/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "orders",
+                    "customers",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "455"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"1c7-EbQdwF3NXzah8Pi1uaushRSfveQ\""
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 01 Oct 2026 18:06:34 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 3,\n    \"customerId\": 1,\n    \"orderDate\": \"2026-10-01T18:01:39.000Z\",\n    \"status\": \"pending\",\n    \"createdAt\": \"2026-10-01T18:01:39.000Z\",\n    \"updatedAt\": \"2026-10-01T18:01:39.000Z\",\n    \"customer\": {\n      \"id\": 1,\n      \"name\": \"Pepe Juanito\",\n      \"email\": \"pepe@gmail.com\"\n    }\n  },\n  {\n    \"id\": 2,\n    \"customerId\": 1,\n    \"orderDate\": \"2026-10-01T17:56:52.000Z\",\n    \"status\": \"shipped\",\n    \"createdAt\": \"2026-10-01T17:56:52.000Z\",\n    \"updatedAt\": \"2026-10-01T17:57:59.000Z\",\n    \"customer\": {\n      \"id\": 1,\n      \"name\": \"Pepe Juanito\",\n      \"email\": \"pepe@gmail.com\"\n    }\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/customers/uan/orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/customers/epe/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "customers",
+                "epe",
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/customers/uan/orders",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/customers/uan/orders",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "customers",
+                    "uan",
+                    "orders"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "466"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"1d2-rcfEr+7qGH5c6u0sFe96ugOqogM\""
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 01 Oct 2026 18:07:47 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Pepe Juanito\",\n    \"email\": \"pepe@gmail.com\",\n    \"createdAt\": \"2026-10-01T17:55:31.000Z\",\n    \"updatedAt\": \"2026-10-01T17:55:48.000Z\",\n    \"orders\": [\n      {\n        \"id\": 2,\n        \"customerId\": 1,\n        \"orderDate\": \"2026-10-01T17:56:52.000Z\",\n        \"status\": \"shipped\",\n        \"createdAt\": \"2026-10-01T17:56:52.000Z\",\n        \"updatedAt\": \"2026-10-01T17:57:59.000Z\"\n      },\n      {\n        \"id\": 3,\n        \"customerId\": 1,\n        \"orderDate\": \"2026-10-01T18:01:39.000Z\",\n        \"status\": \"pending\",\n        \"createdAt\": \"2026-10-01T18:01:39.000Z\",\n        \"updatedAt\": \"2026-10-01T18:01:39.000Z\"\n      }\n    ]\n  }\n]"
+            },
+            {
+              "name": "http://localhost:3000/api/customers/uan/orders",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/customers/epe/orders",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "customers",
+                    "epe",
+                    "orders"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "778"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"30a-cGWLOiKRlRV+8dz/Oon2/FUpp6Y\""
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 01 Oct 2026 18:08:57 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Pepe Juanito\",\n    \"email\": \"pepe@gmail.com\",\n    \"createdAt\": \"2026-10-01T17:55:31.000Z\",\n    \"updatedAt\": \"2026-10-01T17:55:48.000Z\",\n    \"orders\": [\n      {\n        \"id\": 2,\n        \"customerId\": 1,\n        \"orderDate\": \"2026-10-01T17:56:52.000Z\",\n        \"status\": \"shipped\",\n        \"createdAt\": \"2026-10-01T17:56:52.000Z\",\n        \"updatedAt\": \"2026-10-01T17:57:59.000Z\"\n      },\n      {\n        \"id\": 3,\n        \"customerId\": 1,\n        \"orderDate\": \"2026-10-01T18:01:39.000Z\",\n        \"status\": \"pending\",\n        \"createdAt\": \"2026-10-01T18:01:39.000Z\",\n        \"updatedAt\": \"2026-10-01T18:01:39.000Z\"\n      }\n    ]\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Pepe Alberto\",\n    \"email\": \"pepealberto@gmail.com\",\n    \"createdAt\": \"2026-10-01T18:05:47.000Z\",\n    \"updatedAt\": \"2026-10-01T18:05:47.000Z\",\n    \"orders\": [\n      {\n        \"id\": 4,\n        \"customerId\": 2,\n        \"orderDate\": \"2026-10-01T18:06:15.000Z\",\n        \"status\": \"shipped\",\n        \"createdAt\": \"2026-10-01T18:06:15.000Z\",\n        \"updatedAt\": \"2026-10-01T18:06:15.000Z\"\n      }\n    ]\n  }\n]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bicycle-details",
+      "item": [
+        {
+          "name": "http://localhost:3000/api/bicycle-details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/bicycle-details",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "bicycle-details"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/bicycle-details",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/bicycle-details",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "bicycle-details"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "185"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"b9-PDNSQUWwKox+Iuo/EdVgzf76+j0\""
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 29 Sep 2026 17:53:14 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 2,\n    \"bicycleId\": 1,\n    \"frameMaterial\": \"Aluminum\",\n    \"wheelSize\": \"10.0\",\n    \"weight\": \"50.00\",\n    \"suspension\": \"full\",\n    \"createdAt\": \"2026-09-29T17:51:48.000Z\",\n    \"updatedAt\": \"2026-09-29T17:51:48.000Z\"\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/bicycle-details",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{  \r\n    \"bicycleId\": \"1\",  \r\n    \"frameMaterial\": \"Aluminum\", \r\n    \"wheelSize\": \"10\", \r\n    \"weight\": 50, \r\n    \"suspension\": \"full\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/bicycle-details",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "bicycle-details"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/bicycle-details",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{  \r\n    \"bicycleId\": \"1\",  \r\n    \"frameMaterial\": \"Aluminum\", \r\n    \"wheelSize\": \"10\", \r\n    \"weight\": 50, \r\n    \"suspension\": \"full\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/bicycle-details",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "bicycle-details"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "178"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"b2-L0IgLzlrvgqemQ9h8KNwQs/0MDc\""
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 29 Sep 2026 17:51:48 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 2,\n  \"bicycleId\": \"1\",\n  \"frameMaterial\": \"Aluminum\",\n  \"wheelSize\": \"10\",\n  \"weight\": 50,\n  \"suspension\": \"full\",\n  \"updatedAt\": \"2026-09-29T17:51:48.635Z\",\n  \"createdAt\": \"2026-09-29T17:51:48.635Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/bicycle-details/2",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{  \r\n    \"bicycleId\": \"1\",  \r\n    \"frameMaterial\": \"Carbon\", \r\n    \"wheelSize\": \"10\", \r\n    \"weight\": 50,\r\n    \"suspension\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/bicycle-details/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "bicycle-details",
+                "2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/bicycle-details/2",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{  \r\n    \"bicycleId\": \"1\",  \r\n    \"frameMaterial\": \"Carbon\", \r\n    \"wheelSize\": \"10\", \r\n    \"weight\": 50,\r\n    \"suspension\": \"\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/bicycle-details/2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "bicycle-details",
+                    "2"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "172"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"ac-wYBXzn1tWd7ZVpFpqMyNuvN05Sk\""
+                },
+                {
+                  "key": "date",
+                  "value": "Tue, 29 Sep 2026 17:54:10 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 2,\n  \"bicycleId\": \"1\",\n  \"frameMaterial\": \"Carbon\",\n  \"wheelSize\": \"10\",\n  \"weight\": 50,\n  \"suspension\": \"\",\n  \"createdAt\": \"2026-09-29T17:51:48.000Z\",\n  \"updatedAt\": \"2026-09-29T17:54:10.181Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/bicycle-details/2",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/bicycle-details/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "bicycle-details",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Customers",
+      "item": [
+        {
+          "name": "http://localhost:3000/api/customers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/customers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "customers"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/customers",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/customers/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "customers",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "142"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"8e-z/IJgOvMtG7k+iwbg70gf0iFBTk\""
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 01 Oct 2026 17:55:41 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Pepe Juanito\",\n    \"email\": \"pepejuanito@gmail.com\",\n    \"createdAt\": \"2026-10-01T17:55:31.000Z\",\n    \"updatedAt\": \"2026-10-01T17:55:31.000Z\"\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/customers",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Pepe Alberto\",\r\n  \"email\": \"pepealberto@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/customers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "customers"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/customers",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Pepe Juanito\",\r\n  \"email\": \"pepejuanito@gmail.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/customers",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "customers"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "140"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"8c-tYAH0C2+sXEagNikrB49XjikzTI\""
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 01 Oct 2026 17:55:31 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 1,\n  \"name\": \"Pepe Juanito\",\n  \"email\": \"pepejuanito@gmail.com\",\n  \"updatedAt\": \"2026-10-01T17:55:31.296Z\",\n  \"createdAt\": \"2026-10-01T17:55:31.296Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/customers/1",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Pepe Juanito\",\r\n  \"email\": \"pepe@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/customers/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "customers",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/customers/1",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"Pepe Juanito\",\r\n  \"email\": \"pepe@gmail.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/customers/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "customers",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "133"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"85-4+0WY8PLhpfxhowib7LmiDT5cSA\""
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 01 Oct 2026 17:55:48 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 1,\n  \"name\": \"Pepe Juanito\",\n  \"email\": \"pepe@gmail.com\",\n  \"createdAt\": \"2026-10-01T17:55:31.000Z\",\n  \"updatedAt\": \"2026-10-01T17:55:48.086Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/customers/1",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/customers/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "customers",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/customers/1",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/customers/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "customers",
+                    "1"
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 01 Oct 2026 18:09:22 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "http://localhost:3000/api/orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/orders",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/orders",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "orders"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "161"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"a1-zo7qYMvbra8AU7QGYwhpyxLlUxk\""
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 01 Oct 2026 17:58:17 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 2,\n    \"customerId\": 1,\n    \"orderDate\": \"2026-10-01T17:56:52.000Z\",\n    \"status\": \"shipped\",\n    \"createdAt\": \"2026-10-01T17:56:52.000Z\",\n    \"updatedAt\": \"2026-10-01T17:57:59.000Z\"\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/orders",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"customerId\": \"2\",\r\n  \"status\": \"shipped\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/orders",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"customerId\": \"1\",\r\n  \"status\": \"paid\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/orders",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "orders"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "158"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"9e-eBOZe+lXO1bwhmiepglhGjk6L6w\""
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 01 Oct 2026 17:56:52 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"orderDate\": \"2026-10-01T17:56:52.959Z\",\n  \"id\": 2,\n  \"customerId\": \"1\",\n  \"status\": \"paid\",\n  \"updatedAt\": \"2026-10-01T17:56:52.959Z\",\n  \"createdAt\": \"2026-10-01T17:56:52.959Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/orders/1",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"customerId\": \"1\",\r\n  \"status\": \"shipped\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/orders/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "orders",
+                "2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/orders/2",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"customerId\": \"1\",\r\n  \"status\": \"shipped\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/orders/2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "orders",
+                    "2"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "161"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"a1-A4RGuugSXowV0mk9xuTGyXq/bhs\""
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 01 Oct 2026 17:57:59 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 2,\n  \"customerId\": \"1\",\n  \"orderDate\": \"2026-10-01T17:56:52.000Z\",\n  \"status\": \"shipped\",\n  \"createdAt\": \"2026-10-01T17:56:52.000Z\",\n  \"updatedAt\": \"2026-10-01T17:57:59.120Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "http://localhost:3000/api/orders/1",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/orders/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "orders",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "http://localhost:3000/api/orders/1",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/orders/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "orders",
+                    "1"
+                  ]
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "date",
+                  "value": "Thu, 01 Oct 2026 17:57:05 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "http://localhost:3000",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000"
+        }
+      },
+      "response": [
+        {
+          "name": "http://localhost:3000",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000"
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "25"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"19-hjC3/ZB3whhpQUr9S8r9gfMSdU0\""
+            },
+            {
+              "key": "date",
+              "value": "Tue, 29 Sep 2026 18:02:22 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"API running\"\n}"
+        }
+      ]
+    }
+  ]
+}
